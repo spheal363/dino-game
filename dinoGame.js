@@ -6,8 +6,8 @@ const imageNames = ['bird', 'cactus', 'dino'];
 const game = {
     counter: 0,
     backGrounds: [],
-    bgm1: new Audio('https://github.com/spheal363/dino-game/blob/30dffc304d845607a606f9308bfe865ee6348d60/bgm/fieldSong.mp3'),
-    bgm2: new Audio('https://github.com/spheal363/dino-game/blob/30dffc304d845607a606f9308bfe865ee6348d60/bgm/jump.mp3'),
+    bgm1: new Audio('https://raw.githubusercontent.com/spheal363/dino-game/main/bgm/fieldSong.mp3'),
+    bgm2: new Audio('https://raw.githubusercontent.com/spheal363/dino-game/main/bgm/jump.mp3'),
     enemys: [],
     enemyCountdown: 0,
     image: {},
@@ -20,7 +20,7 @@ game.bgm1.loop = true;
 // 複数画像読み込み
 let imageLoadCounter = 0;
 for (const imageName of imageNames) {
-    const imagePath = `https://github.com/spheal363/dino-game/blob/main/image/${imageName}.png?raw=true`;
+    const imagePath = `https://raw.githubusercontent.com/spheal363/dino-game/main/image/${imageName}.png`;
     game.image[imageName] = new Image();
     game.image[imageName].src = imagePath;
     game.image[imageName].onload = () => {
